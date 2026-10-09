@@ -42,14 +42,14 @@ opencode plugin add github:BeyzonCorp/opencode-claude-compaction#v1.0.0
 opencode service restart
 ```
 
-Verificá que cargó:
+Verificá que quedó registrado y que cargó sin errores (`opencode plugin list` no muestra los plugins instalados desde GitHub):
 
 ```sh
-opencode plugin list
-grep claude-compaction ~/.local/share/opencode/log/opencode.log | tail -3
+grep claude-compaction ~/.config/opencode/opencode.json
+grep "failed to load plugin" ~/.local/share/opencode/log/opencode.log | grep claude-compaction
 ```
 
-No debe aparecer `failed to load plugin`.
+El primero debe mostrar la entrada del plugin y el segundo no debe mostrar nada. La prueba definitiva es compactar una sesión (`/compact`): el resumen debe empezar con `## 1. Primary request`.
 
 ## Configuración recomendada
 
