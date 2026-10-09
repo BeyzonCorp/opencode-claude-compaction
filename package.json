@@ -1,0 +1,22 @@
+{
+  "name": "opencode-claude-compaction",
+  "version": "1.0.0",
+  "description": "Plugin de OpenCode v2 que reemplaza el resumen de compactación por uno detallado al estilo Claude Code.",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "compaction"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeyzonCorp/opencode-claude-compaction.git"
+  }
+}
